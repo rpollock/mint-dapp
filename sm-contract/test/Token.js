@@ -13,8 +13,8 @@ describe("Token", function () {
     });
 
     it("Should deploy with correct name and symbol", async function () {
-        expect(await token.name()).to.equal("MyToken");
-        expect(await token.symbol()).to.equal("MTK");
+        expect(await token.name()).to.equal("Cool Pixel Token");
+        expect(await token.symbol()).to.equal("CPT");
     });
 
     it("Should allow users to mint tokens", async function () {

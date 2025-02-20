@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 contract Token is ERC20, Ownable {
     uint256 public constant PRICE_PER_TOKEN = 0.0001 ether;
 
-    constructor() ERC20("MyToken", "MTK") Ownable(msg.sender) {}
+    constructor() ERC20("Cool Pixel Token", "CPT") Ownable(msg.sender) {}
 
     function mint(address to) public payable {
         require(msg.value >= PRICE_PER_TOKEN, "Insufficient ETH");
