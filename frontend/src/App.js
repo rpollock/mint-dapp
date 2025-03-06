@@ -482,9 +482,10 @@ function App() {
 
   return (
     <>
+    {/* nav bar */}
       <nav className="navbar">
         <div className="logo">
-          <img src={logo} alt="Logo" />
+          <img src={logo} alt="Cool Pixel Turtle" />
         </div>
         <div className="social-links">
           <a href="https://discord.com" target="_blank" rel="noopener noreferrer">
@@ -498,8 +499,49 @@ function App() {
           </a>
         </div>
       </nav>
-      <div className="container">
-        <h1>Mint Cool Pixel Tokens</h1>
+{/* hero seciton */}
+      <header className="hero">
+        <h1>Cool Pixel Tokens</h1>
+        <p>Mint your own pixel tokens now!</p>
+        {!account ? (
+          <button className="connect-btn" onClick={connectWallet}>
+            Connect Wallet
+          </button>
+        ) : (
+          <a href="#mint" className="mint-btn">
+            Go to Minting
+          </a>
+        )}
+      </header>
+{/* about sectino */}
+      <section className="about">
+        <div className="about-container">
+          <div className="about-text">
+            <h2>About Cool Pixel Turtle</h2>
+            <p>
+              Cool Pixel Turtle is a fun ERC-20 token project designed for pixel art lovers.
+              Join the community and collect awesome pixel turtles!
+            </p>
+          </div>
+
+          <div className="about-image">
+            <img src="pixil-frame.png" alt="Cool Pixel Turtle" />
+          </div>
+        </div>
+      </section>
+          {/* road map */}
+      <section className="roadmap">
+        <h2>Roadmap</h2>
+        <ul>
+          <li>🚀 Phase 1: Launch website & smart contract</li>
+          <li>🎨 Phase 2: Introduce rare pixel turtle designs</li>
+          <li>💎 Phase 3: Community rewards & airdrops</li>
+          <li>🌍 Phase 4: Expand ecosystem & partnerships</li>
+        </ul>
+      </section>
+          {/* Minting section */}
+      <section className="minting" id="mint">
+        <h2>Mint Your Cool Pixel Tokens</h2>
         {!account ? (
           <button className="connect-btn" onClick={connectWallet}>
             Connect Wallet
@@ -516,7 +558,7 @@ function App() {
                 min="1"
               />
               <button onClick={mintTokens} disabled={loading}>
-                {loading ? 'Minting...' : 'Mint Tokens'}
+                {loading ? "Minting..." : "Mint Tokens"}
               </button>
             </div>
             <p className="cost">Cost: {amount ? amount * 0.0001 : 0} ETH</p>
@@ -524,7 +566,12 @@ function App() {
             {success && <p className="success">{success}</p>}
           </div>
         )}
-      </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="footer">
+        <p>© 2025 Cool Pixel Turtle. All rights reserved.</p>
+      </footer>
     </>
   );
 }
