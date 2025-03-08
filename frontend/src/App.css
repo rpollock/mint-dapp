@@ -26,7 +26,7 @@ body {
 
 
 .navbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 98%;
@@ -57,8 +57,9 @@ body {
 
 
 .hero {
-  background-image: url(img/hero-img.jpeg);
-  background-size: cover;
+  background-image: url(img/background.png);
+  background-size: contain;
+  background-repeat: repeat-x;
   background-position: center;
   height: 80vh;
   display: flex;
@@ -66,6 +67,13 @@ body {
   justify-content: center;
   align-items: center;
   text-shadow: 2px 2px #000;
+  background-color: white;
+}
+
+@media screen and (max-width: 1400px) {
+  .hero{
+    background-size: cover;
+  }
 }
 
 .hero h1 {
@@ -97,8 +105,22 @@ body {
 
 .roadmap, .minting {
   padding: 50px 20px;
-  background: #333;
-  margin: 20px 0;
+  background: #ffffff;
+  margin: 0;
+
+}
+
+.minting {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.minting h2 {
+  color: #000;
 }
 
 
@@ -114,17 +136,24 @@ body {
   border-radius: 10px;
 }
 
+.roadmap h2 {
+  color: #000;
+}
+
 
 .mint-section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: black;
 }
+
+
 
 .about {
   padding: 50px;
-  background-color: #222; 
-  color: #fff;
+  background-color: white; 
+  color: black;
   text-align: center;
 }
 
@@ -196,6 +225,7 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 10px;
+    padding: 0;
   }
 }
 
