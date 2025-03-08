@@ -488,13 +488,13 @@ function App() {
           <img src={logo} alt="Cool Pixel Turtle" />
         </div>
         <div className="social-links">
-          <a href="https://discord.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://discord.com" target="_blank" rel="noopener noreferrer" className='discord'>
             Discord
           </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className='twit'>
             Twitter
           </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className='inst'>
             Instagram
           </a>
         </div>
